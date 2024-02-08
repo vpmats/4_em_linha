@@ -23,7 +23,7 @@ void mostrartabuleiro() {
 
 int main() {
     
-    string tabuleiro [8][6] {
+    string tabuleiro [6[8] {
     { "", "", "", "", "", "", "", ""},
     { "", "", "", "", "", "", "", ""},
     { "", "", "", "", "", "", "", ""},
