@@ -4,7 +4,7 @@ using namespace std;
 
 void iniciojogo() {
     // mensagens e in/out de msgs
-    // captacao de decisoes do utilizador
+    // captacao de decisoes do utilizador aaaaaaa
 }
 
 bool terminoujogo() {
