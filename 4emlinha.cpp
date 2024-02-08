@@ -8,6 +8,7 @@ void iniciojogo() {
 }
 
 bool terminoujogo() {
+    cout << "*************** BEM VINDO AO JOGO ***************" << endl;
     //verificar se o jogo terminou
     //alguem ganhou? //tabuleiro cheio??
 }
