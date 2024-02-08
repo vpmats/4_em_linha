@@ -10,9 +10,11 @@ void iniciojogo() {
 bool terminoujogo() {
     //verificar se o jogo terminou
     //alguem ganhou? //tabuleiro cheio??
+    
     if (tabuleirocheio = true) {
         terminoujogo = true;
         cout << "Jogo terminado por nao sobrar espaco no tabuleiro" << endl;
+        
     } else if (alguemganhou = true) {
         terminoujogo = true;
         cout << "Jogo terminado por vitoria de um jogador" << endl;
