@@ -3,12 +3,12 @@
 using namespace std;
 
 void iniciojogo() {
+    cout << "*************** BEM VINDO AO JOGO ***************" << endl;
     // mensagens e in/out de msgs
     // captacao de decisoes do utilizador
 }
 
 bool terminoujogo() {
-    cout << "*************** BEM VINDO AO JOGO ***************" << endl;
     //verificar se o jogo terminou
     //alguem ganhou? //tabuleiro cheio??
 }
