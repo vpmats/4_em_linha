@@ -5,7 +5,6 @@ using namespace std;
 void iniciojogo() {
     // mensagens e in/out de msgs
     // captacao de decisoes do utilizador
-    
 }
 
 bool terminoujogo() {
@@ -23,6 +22,7 @@ void mostrartabuleiro() {
 }
 
 int main() {
+    
     string tabuleiro [8][6] {
     { "", "", "", "", "", "", "", ""},
     { "", "", "", "", "", "", "", ""},
