@@ -39,6 +39,7 @@ int main() {
 
     cout << "\n*************** BEM VINDO AO JOGO ***************" << endl << endl;
 
+    // pede aos jogadores os seus nomes e devolve-os
     cout << "Nome jogador 1: ";
     cin >> nomes[0];
 
