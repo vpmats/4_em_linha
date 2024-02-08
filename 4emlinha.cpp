@@ -35,7 +35,7 @@ int main() {
     bool tabuleiropreenchido = false;
     bool jogoterminou = false;
 
-    cout << "*************** BEM VINDO AO JOGO ***************" << endl;
+    cout << "\n*************** BEM VINDO AO JOGO ***************" << endl;
 
     do {
         iniciojogo();
