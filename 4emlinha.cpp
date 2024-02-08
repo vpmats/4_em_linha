@@ -30,7 +30,7 @@ int main() {
     { "", "", "", "", "", "", "", ""},
     { "", "", "", "", "", "", "", ""},
     { "", "", "", "", "", "", "", ""}    
-    }
+    };
 
     bool tabuleiropreenchido = false;
     bool jogoterminou = false;
