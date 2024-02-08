@@ -3,7 +3,6 @@
 using namespace std;
 
 void iniciojogo() {
-    cout << "*************** BEM VINDO AO JOGO ***************" << endl;
     // mensagens e in/out de msgs
     // captacao de decisoes do utilizador
 }
@@ -35,6 +34,8 @@ int main() {
 
     bool tabuleiropreenchido = false;
     bool jogoterminou = false;
+
+    cout << "*************** BEM VINDO AO JOGO ***************" << endl;
 
     do {
         iniciojogo();
