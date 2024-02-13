@@ -2,18 +2,18 @@
 
 using namespace std;
 
-// Declaração da função mostrartabuleiro para que ela possa ser usada antes de ser definida
+// Declaracao da funcao mostrartabuleiro para que ela possa ser usada antes de ser definida
 void mostrartabuleiro(string tabuleiro[6][8]);
 
-// Função para verificar se algum jogador ganhou
+// FunÃ§Ã£o para verificar se algum jogador ganhou
 bool alguemganhou(string tabuleiro[6][8]) {
     // Verificar horizontalmente
     for(int i = 0; i < 6; i++) {
         for(int j = 0; j < 5; j++) {
-            // Se encontrarmos 4 peças iguais consecutivas na horizontal, mostramos uma mensagem de vitória
+            // Se encontrarmos 4 peÃ§as iguais consecutivas na horizontal, mostramos uma mensagem de vitoria
             if(tabuleiro[i][j] != "" && tabuleiro[i][j] == tabuleiro[i][j+1] && tabuleiro[i][j] == tabuleiro[i][j+2] && tabuleiro[i][j] == tabuleiro[i][j+3]) {
-                cout << "Parabéns, jogador " << tabuleiro[i][j] << " ganhou!" << endl;
-                return; // Retornamos imediatamente pois o jogo terminou
+                cout << "Parabens, jogador " << tabuleiro[i][j] << " ganhou!" << endl;
+                return 0; // Retornamos imediatamente pois o jogo terminou
             }
         }
     }
@@ -21,10 +21,10 @@ bool alguemganhou(string tabuleiro[6][8]) {
     // Verificar verticalmente
     for(int i = 0; i < 3; i++) {
         for(int j = 0; j < 8; j++) {
-            // Se encontrarmos 4 peças iguais consecutivas na vertical, mostramos uma mensagem de vitória
+            // Se encontrarmos 4 peÃ§as iguais consecutivas na vertical, mostramos uma mensagem de vitoria
             if(tabuleiro[i][j] != "" && tabuleiro[i][j] == tabuleiro[i+1][j] && tabuleiro[i][j] == tabuleiro[i+2][j] && tabuleiro[i][j] == tabuleiro[i+3][j]) {
-                cout << "Parabéns, jogador " << tabuleiro[i][j] << " ganhou!" << endl;
-                return; // Retornamos imediatamente pois o jogo terminou
+                cout << "Parabens, jogador " << tabuleiro[i][j] << " ganhou!" << endl;
+                return 0; // Retornamos imediatamente pois o jogo terminou
             }
         }
     }
@@ -32,10 +32,10 @@ bool alguemganhou(string tabuleiro[6][8]) {
     // Verificar diagonalmente (de cima para baixo)
     for(int i = 0; i < 3; i++) {
         for(int j = 0; j < 5; j++) {
-            // Se encontrarmos 4 peças iguais consecutivas na diagonal (de cima para baixo), mostramos uma mensagem de vitória
+            // Se encontrarmos 4 peÃ§as iguais consecutivas na diagonal (de cima para baixo), mostramos uma mensagem de vitoria
             if(tabuleiro[i][j] != "" && tabuleiro[i][j] == tabuleiro[i+1][j+1] && tabuleiro[i][j] == tabuleiro[i+2][j+2] && tabuleiro[i][j] == tabuleiro[i+3][j+3]) {
-                cout << "Parabéns, jogador " << tabuleiro[i][j] << " ganhou!" << endl;
-                return; // Retornamos imediatamente pois o jogo terminou
+                cout << "Parabens, jogador " << tabuleiro[i][j] << " ganhou!" << endl;
+                return 0; // Retornamos imediatamente pois o jogo terminou
             }
         }
     }
@@ -43,16 +43,16 @@ bool alguemganhou(string tabuleiro[6][8]) {
     // Verificar diagonalmente (de baixo para cima)
     for(int i = 3; i < 6; i++) {
         for(int j = 0; j < 5; j++) {
-            // Se encontrarmos 4 peças iguais consecutivas na diagonal (de baixo para cima), mostramos uma mensagem de vitória
+            // Se encontrarmos 4 peÃ§as iguais consecutivas na diagonal (de baixo para cima), mostramos uma mensagem de vitoria
             if(tabuleiro[i][j] != "" && tabuleiro[i][j] == tabuleiro[i-1][j+1] && tabuleiro[i][j] == tabuleiro[i-2][j+2] && tabuleiro[i][j] == tabuleiro[i-3][j+3]) {
-                cout << "Parabéns, jogador " << tabuleiro[i][j] << " ganhou!" << endl;
-                return; // Retornamos imediatamente pois o jogo terminou
+                cout << "Parabens, jogador " << tabuleiro[i][j] << " ganhou!" << endl;
+                return 0; // Retornamos imediatamente pois o jogo terminou
             }
         }
     }
 }
 
-// Função para mostrar o tabuleiro
+// Funcao para mostrar o tabuleiro
 void mostrartabuleiro(string tabuleiro[6][8]) {
     // Pergunta ao jogador se deseja ver o tabuleiro atual
     char resposta;
@@ -70,27 +70,27 @@ void mostrartabuleiro(string tabuleiro[6][8]) {
     }
 }
 
-// Função para verificar se o tabuleiro está cheio
+// Funcao para verificar se o tabuleiro esta cheio
 bool tabuleirocheio(string tabuleiro[6][8]) {
     for(int i = 0; i < 6; i++) {
         for(int j = 0; j < 8; j++) {
-            // Se houver uma posição vazia no tabuleiro, retornamos falso
+            // Se houver uma posicao vazia no tabuleiro, retornamos falso
             if(tabuleiro[i][j] == "") {
                 return false;
             }
         }
     }
-    // Se não houver nenhuma posição vazia, retornamos verdadeiro
+    // Se nao houver nenhuma posicao vazia, retornamos verdadeiro
     return true;
 }
 
-// Função para iniciar o jogo
+// FunÃ§Ã£o para iniciar o jogo
 void iniciojogo(string tabuleiro[6][8], char letras[2]) {
-    // Início do jogo
+    // InÃ­cio do jogo
     cout << "Inicio do jogo!" << endl;
     int coluna;
-    int jogador = 0; // jogador 0 é o jogador 1, jogador 1 é o jogador 2
-    char resposta; // Variável para armazenar a resposta do jogador
+    int jogador = 0; // jogador 0 e o jogador 1, jogador 1 e o jogador 2
+    char resposta; // Variavel para armazenar a resposta do jogador
     // Loop do jogo
     do {
         // Pergunta ao jogador se deseja ver o tabuleiro atual
@@ -101,20 +101,20 @@ void iniciojogo(string tabuleiro[6][8], char letras[2]) {
         }
 
         // Solicitar a jogada do jogador atual
-        cout << "Jogador " << jogador + 1 << " (" << letras[jogador] << "), faça sua jogada (coluna 0-7): ";
+        cout << "Jogador " << jogador + 1 << " (" << letras[jogador] << "), faca sua jogada (coluna 0-7): ";
         cin >> coluna;
 
-        // Verificar se a coluna está dentro do intervalo válido
+        // Verificar se a coluna esta dentro do intervalo valido
         if (coluna < 0 || coluna > 7) {
-            cout << "Coluna inválida. Tente novamente." << endl;
+            cout << "Coluna invalida. Tente novamente." << endl;
             continue;
         }
 
-        // Encontrar a primeira posição vazia na coluna escolhida
+        // Encontrar a primeira posicao vazia na coluna escolhida
         int linha;
         for (linha = 5; linha >= 0; linha--) {
             if (tabuleiro[linha][coluna] == "") {
-                tabuleiro[linha][coluna] = letras[jogador]; // Preencher a posição com a letra do jogador
+                tabuleiro[linha][coluna] = letras[jogador]; // Preencher a posicao com a letra do jogador
                 break;
             }
         }
@@ -125,7 +125,7 @@ void iniciojogo(string tabuleiro[6][8], char letras[2]) {
         // Trocar de jogador
         jogador = (jogador + 1) % 2;
 
-    } while (!tabuleirocheio(tabuleiro) && !alguemganhou(tabuleiro)); // Continuar enquanto houver espaço vazio no tabuleiro e ninguém ganhar
+    } while (!tabuleirocheio(tabuleiro) && !alguemganhou(tabuleiro)); // Continuar enquanto houver espaÃ§o vazio no tabuleiro e ninguem ganhar
 }
 
  int main() {
@@ -143,7 +143,7 @@ void iniciojogo(string tabuleiro[6][8], char letras[2]) {
 
     cout << "\n*************** BEM VINDO AO JOGO ***************" << endl << endl;
 
-    // Solicitar nomes dos jogadores e suas letras
+    // Solicitar os nomes dos jogadores e suas letras
     for (int i = 0; i < 2; i++) {
         cout << "Nome jogador " << i + 1 << ": ";
         cin >> nomes[i];
